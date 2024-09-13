@@ -39,10 +39,10 @@ const deleteForm = new PopupWithForm({
 deleteForm.setEventListeners();
 
 const api = new Api({
-    baseUrl: "https://around.nomoreparties.co/v1/group-4",
+    baseUrl: 'https://around.nomoreparties.co/v1/group-4',
     headers: {
         authorization: process.env.API_KEY,
-        "Content-Type": "application/json"
+        'Content-Type': 'application/json'
     }
 });
 

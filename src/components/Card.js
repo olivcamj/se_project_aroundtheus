@@ -68,7 +68,7 @@ class Card {
     }
 
     _likeCount() {
-        if (typeof this._likes !== "undefined") {
+        if (typeof this._likes !== 'undefined') {
             this._cardLikeCount().textContent = this._likes.length;
         };
     }
@@ -78,7 +78,7 @@ class Card {
     }
 
     wasLiked() {
-        return this._cardHeartIcon().classList.contains("card__heart-icon_active");
+        return this._cardHeartIcon().classList.contains('card__heart-icon_active');
     }
 
     like(count) {

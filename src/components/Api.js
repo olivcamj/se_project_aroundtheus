@@ -31,7 +31,7 @@ class Api {
     addCard({ link, name }) {
         return fetch(this._baseUrl + '/cards', {
             headers: this._headers,
-            method: "POST",
+            method: 'POST',
             body: JSON.stringify({
                 name,
                 link
@@ -43,7 +43,7 @@ class Api {
     deleteCard(cardId) {
         return fetch(this._baseUrl + '/cards/' + cardId, {
             headers: this._headers,
-            method: "DELETE"
+            method: 'DELETE'
         })
         .then((res) => res.ok ? res.json() : Promise.reject('Error!' + res.statusText))
     }
@@ -51,7 +51,7 @@ class Api {
     editUserInfo(data) {
         return fetch(this._baseUrl + '/users/me', {
             headers: this._headers,
-            method: "PATCH",
+            method: 'PATCH',
             body: JSON.stringify({
                 name: data.name,
                 about: data.title
@@ -64,12 +64,12 @@ class Api {
         if (boolean) {
             return fetch(this._baseUrl + '/cards/likes/' + cardId, {
             headers: this._headers,
-            method: "PUT"}) 
+            method: 'PUT'}) 
             .then((res) => res.ok ? res.json() : Promise.reject('Error!' + res.statusText))
         } else {
             return fetch(this._baseUrl + '/cards/likes/' + cardId, {
             headers: this._headers,
-            method: "DELETE"})
+            method: 'DELETE'})
             .then((res) => res.ok ? res.json() : Promise.reject('Error!' + res.statusText))
         }
     }
@@ -77,7 +77,7 @@ class Api {
     setUserAvatar(avatar){
         return fetch(this._baseUrl + '/users/me/avatar', {
             headers: this._headers,
-            method: "PATCH",
+            method: 'PATCH',
             body: JSON.stringify({
                 avatar
             })

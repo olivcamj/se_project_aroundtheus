@@ -23,7 +23,7 @@ class FormValidator {
         errorElement.classList.remove(this._errorClass);
         inputElement.classList.remove(this._inputErrorClass);
         // Reset the message once it's hidden
-        errorElement.textContent = "";
+        errorElement.textContent = '';
     }
 
     _checkInputValidity(inputElement) {
