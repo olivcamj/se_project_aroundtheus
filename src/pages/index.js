@@ -112,7 +112,7 @@ api.getUserData()
         function creatingCardInfo(data) {
             const card = new Card({
                 data,
-                handleCardClick: () => {
+                handleImageClick: () => {
                     modalWithImage.open(data);  
                 },
                 handleDeleteClick: (cardId) => {           

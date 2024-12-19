@@ -1,5 +1,5 @@
 class Card {
-    constructor({ data, handleCardClick, handleDeleteClick, handleDeleteIcon, handleLikeCount, handleLikeClick }, cardTemplateSelector) {
+    constructor({ data, handleImageClick, handleDeleteClick, handleDeleteIcon, handleLikeCount, handleLikeClick }, cardTemplateSelector) {
         this._name = data.name;
         this._link = data.link;
         this._id = data._id;
@@ -7,7 +7,7 @@ class Card {
 
         this._cardTemplateSelector = cardTemplateSelector;
 
-        this._handleCardClick = handleCardClick;
+        this._handleImageClick = handleImageClick;
         this._handleDeleteClick = handleDeleteClick;
         this._handleDeleteIcon = handleDeleteIcon;
         this._handleLikeCount = handleLikeCount;
@@ -54,7 +54,7 @@ class Card {
         });
 
         this._cardImage().addEventListener('click', () => {
-            this._handleCardClick({ link: this._link, name: this._text });
+            this._handleImageClick({ link: this._link, name: this._text });
         });
     }
 
