@@ -83,13 +83,11 @@ api.getUserData()
         });
 
         function renderLoading(isLoading, modal) {
-            if (isLoading) {
-                modal.querySelector('.form__btn').textContent = 'Saving...';
-            } else {
-                modal.querySelector('.form__btn').textContent = 'Save';
-                //formSave.value = 'Save';
-            }
-        };
+            const modalFormBtn = modal.querySelector('.form__btn');
+          return   isLoading
+                ? modalFormBtn.textContent = 'Saving...'
+                : modalFormBtn.textContent = 'Save'
+         }
 
         const setUserAvatar = new PopupWithForm({
             handleSubmitForm: (data) => {
