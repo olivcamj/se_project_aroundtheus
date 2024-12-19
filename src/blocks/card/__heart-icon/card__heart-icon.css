@@ -9,7 +9,8 @@
   background-position: center;
   background-size: 100% 100%;
   border: none;
-  background-color: #fff;
+  background-color: transparent;
+  background-repeat: no-repeat;
   outline: none;
 }
 
